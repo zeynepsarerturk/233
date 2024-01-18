@@ -7,7 +7,7 @@ if(!isset($_SESSION["name"])) {
 }
 else
 {
-    echo "Hoş geldiniz, " . $_SESSION["name"] . "!";
+    echo "Welcome, " . $_SESSION["name"] . "!";
 }
 
 ?>
@@ -16,13 +16,12 @@ else
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleView.css">
     <title>View</title>
 </head>
 <body>
     <button id="newPostButton" class="new-post-button">
-        <div class="plus-icon">+</div>
-        <div class="button-text">Yeni İşe Alım Girişi</div>
+        <div class="plus-icon">+</div>New Hiring</div>
     </button>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
