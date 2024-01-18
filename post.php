@@ -67,22 +67,22 @@ if ($schoolResult && mysqli_num_rows($schoolResult) > 0) {
 <body>
     <h2>Yeni İşe Alım Girişi</h2>
     <form id="postForm">
-        <label for="department">Departman Seçimi:</label>
+        <label for="department">Departmant:</label>
         <select id="department" name="department" required>
-            <option value="">Departman Seçin</option>
+            <option value="">Departmant</option>
             <?php foreach ($departments as $department): ?>
                 <option value="<?php echo htmlspecialchars($department); ?>">
                     <?php echo htmlspecialchars($department); ?>
                 </option>
             <?php endforeach; ?>
         </select>
-        <label for="position">Pozisyon Seçimi:</label>
+        <label for="position">Pozisition:</label>
         <select id="position" name="position" required>
-            <option value="">Pozisyon Seçin</option>
+            <option value="">Position</option>
         </select>
-        <label for="school">Okul Seçimi:</label>
+        <label for="school">School:</label>
         <select id="school" name="school" required>
-            <option value="">Okul Seçin</option>
+            <option value="">School</option>
             <?php foreach ($schools as $school): ?>
                 <option value="<?php echo htmlspecialchars($school); ?>">
                     <?php echo htmlspecialchars($school); ?>
@@ -106,7 +106,7 @@ if ($schoolResult && mysqli_num_rows($schoolResult) > 0) {
                         if (data.error) {
                             $("#position").append($('<option>', {
                                 value: '',
-                                text: 'Pozisyon bulunamadı'
+                                text: 'Position Not Found'
                             }));
                         } else {
                             $.each(data, function(index, value) {
